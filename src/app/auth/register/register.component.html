@@ -1,0 +1,67 @@
+
+<div *transloco="let t" class="card">
+    <div class="card flex justify-content-center">
+        <div class="surface-ground border-round p-6 shadow-8  md:col-6 ">
+            <div class="card rounded-lg p-4  p-3 border-round jsu ">
+                <div class="login-container">
+                    <div  class="flex justify-content-center mb-2   " >
+                        <p class=" text-5xl"><b>{{t('register.signUp')}}</b></p>
+                    </div>
+                    <hr class="mb-3">
+                    <form [formGroup]="frm" (ngSubmit)="userCreate(frm.value)">
+                        <div class="col-12 ">
+                            <div class="card ">
+                                <div class="p-fluid p-formgrid grid">
+                                    <div class="field col-12 md:col-6">
+                                        <label >{{t('register.Firstname')}}</label>
+                                        <input virtualKeyboard [disableVirtualKeyboard]="this.isVirtualKeyboardEnabled" formControlName="firstname" pInputText  type="text"/>
+                                        <small class="form-text text-muted invalid-feedback"
+                                         *ngIf="submitted && commponent.firstname.errors?.required">{{t('register.FirstnameSmall')}}</small>
+                                    </div>
+                                    <div class="field col-12 md:col-6">
+                                        <label htmlFor="lastname2">{{t('register.Surname')}}</label>
+                                        <input virtualKeyboard [disableVirtualKeyboard]="this.isVirtualKeyboardEnabled" formControlName="surname" pInputText id="lastname2" type="text" />
+                                        <small class="form-text text-muted invalid-feedback"
+                                         *ngIf="submitted && commponent.surname.errors?.required">{{t('register.SurnameSmall')}}</small>
+                                    </div>
+                                    
+                                    <div class="field col-12 md:col-6">
+                                        <label htmlFor="username">{{t('register.UN')}}</label>
+                                        <input virtualKeyboard [disableVirtualKeyboard]="this.isVirtualKeyboardEnabled" formControlName="username" pInputText id="username" type="text" />
+                                        <small class="form-text text-muted invalid-feedback"
+                                         *ngIf="submitted && commponent.username.errors?.required ">{{t('register.UNSmall')}}</small>
+                                    </div>
+
+                                    <div class="field col-12 md:col-6">
+                                        <label htmlFor="email">{{t('register.email')}}</label>
+                                        <input virtualKeyboard [disableVirtualKeyboard]="this.isVirtualKeyboardEnabled" formControlName="email" pInputText id="email" type="text" />
+                                        <small class="form-text text-muted invalid-feedback " ng-invalid
+                                         *ngIf="submitted && commponent.email.errors?.required">{{t('register.emailSmall')}}</small>
+                                         <small class="form-text text-muted invalid-feedback " 
+                                         *ngIf="commponent.email.errors?.email">{{t('register.emailSmallFormat')}}</small>
+                                    </div>
+
+                                    <div class="field col-12 ">
+                                        <label  htmlFor="password">{{t('register.password')}}</label>
+                                        <p-password formControlName="password" [toggleMask]="true" [feedback]="false"></p-password>
+                                        <small class="form-text text-muted invalid-feedback"
+                                         *ngIf="submitted && commponent.password.errors?.required">{{t('register.passwordSmall')}}</small>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <p-toast  [showTransformOptions]="'translateY(100%)'" [showTransitionOptions]="'1000ms'" [hideTransitionOptions]="'1000ms'" [showTransformOptions]="'translateX(100%)'"></p-toast>
+                                        <button type="submit"  style="background-color: #212121;" pButton label="{{ 'register.signup' | transloco }}" class="w-full p-3 text-xl"></button>
+                                        <p class="pt-2 flex justify-content-center">
+                                            <a (click)="toggleVirtualKeyboard()">Sanal Klavye: </a>
+                                            <span class="ml-1">{{ isVirtualKeyboardEnabled ? 'Kapalı' : 'Açık' }}</span>
+                                        </p>
+                                    </div>             
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

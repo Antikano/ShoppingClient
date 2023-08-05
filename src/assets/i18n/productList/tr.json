@@ -1,0 +1,11 @@
+{
+    "Image": "Resim",
+    "Name": "İsim",
+    "Price": "Fiyat",
+    "Stock": "Stok",
+    "Category": "Kategori",
+    "Categories": "Kategoriler",
+    "totalNumberOne": "Toplamda ",
+    "totalNumberTwo": "ürün bulunmaktadır"
+  }
+  

@@ -1,0 +1,9 @@
+{
+    "Image": "Resim",
+    "Name": "İsim",
+    "Price": "Fiyat",
+    "Stock": "Stok",
+    "Quantity": "Miktar",
+    "CompleteOrder": "Siparişi Tamamla"
+  }
+  

@@ -1,0 +1,10 @@
+{
+
+    "title":"Giriş Yap",
+    "username":"Kullanıcı Adı",
+    "usurnameSmall":"Lütfen 'Kullanıcı Adı' alanını boş geçmeyiniz.",
+    "password":"Şifre",
+    "passwordSmall":"Lütfen 'Şifre' alanını boş geçmeyiniz.",
+    "notAMember": "Üye değil misin?",
+    "RegisterHere": "Kayıt ol!"
+}

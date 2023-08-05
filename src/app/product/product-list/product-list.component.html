@@ -1,0 +1,51 @@
+<div *transloco="let t">
+  
+    <div class="card">
+      <p-table [value]="filteredProducts" [paginator]="true" [rows]="5">
+        <ng-template pTemplate="header">
+          <tr>
+            <th pSortableColumn="name" style="width:20%">{{t('productList.Name')}} <p-sortIcon
+                field="name"></p-sortIcon>
+            </th>
+            <th>{{t('productList.Image')}}</th>
+            <th pSortableColumn="price" style="width:20%">{{t('productList.Price')}} <p-sortIcon
+                field="price"></p-sortIcon>
+            </th>
+            <th>{{t('productList.Stock')}}</th>
+            <th>{{t('productList.Category')}}</th>
+            <th></th>
+          </tr>
+          <p-toast></p-toast>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+          <tr>
+            <td>{{product.name}}</td>
+            <td>
+              <img [src]="getBase64Image(product.imageData)" [alt]="product.name" width="70" height="50"
+                class="shadow-4" />
+            </td>
+            <td>{{product.price | currency:'USD'}}</td>
+            <td>{{product.stock}}</td>
+            <td>{{product.categoryNames}}</td>
+            <td><p-button class="mr-1" styleClass="p-button-rounded" icon="pi pi-cart-plus"
+                (onClick)="addToBasket(product)"></p-button>
+              <p-button styleClass="p-button-rounded p-button-warning" icon="pi pi-pencil"
+                (onClick)="showProductUpdate(product)"></p-button>
+              <p-toast></p-toast>
+            </td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+          <div class="flex align-items-center justify-content-between">
+            {{t('productList.totalNumberOne')}} {{filteredProducts ? filteredProducts.length : 0 }}
+            {{t('productList.totalNumberTwo')}} .
+          </div>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">
+          <p-button type="button" icon="pi pi-plus" (click)="show()" styleClass="p-button-text"></p-button>
+        </ng-template>
+        <ng-template pTemplate="paginatorright"></ng-template>
+      </p-table>
+    </div>
+ 
+</div>

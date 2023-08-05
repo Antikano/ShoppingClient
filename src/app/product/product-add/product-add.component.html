@@ -1,0 +1,72 @@
+<form [formGroup]="frm" (ngSubmit)="createProduct(frm.value)">
+  <div *transloco="let t" class="flex justify-content-center flex-wrap card-container yellow-container">
+
+    <div class="col-12  ">
+      <div class="card p-fluid surface-ground border-round">
+       
+        <div class="field col-6">
+          <label for="name">{{t('productAdd.productName')}}</label>
+          <input formControlName="name" id="name" pInputText type="text"
+            [ngClass]="{'is-invalid': submitted && commponent.name.errors}" />
+          <small class="form-text text-muted invalid-feedback"
+            *ngIf="submitted && commponent.name.errors?.required">{{t('productAdd.productNameReq')}}</small>
+          <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (commponent.name.errors?.maxlength || commponent.name.errors?.minlength)
+        ">{{t('productAdd.productNameLength')}}</small>
+
+        </div>
+        <div class="field col-6">
+          <label for="price">{{t('productAdd.productPrice')}}</label>
+          <input formControlName="price" id="price" required pInputText type="number" />
+          <small class="form-text text-muted invalid-feedback"
+            *ngIf="submitted && commponent.price.errors?.required">{{t('productAdd.productNameReq')}}</small>
+          <small class="form-text text-muted invalid-feedback" *ngIf="submitted && commponent.price.errors?.min">
+            {{t('productAdd.productpriceMinError')}}</small>
+        </div>
+        <div class="field col-6">
+          <label for="stock">{{t('productAdd.productStock')}}</label>
+          <input formControlName="stock" id="stock" pInputText type="number" />
+          <small class="form-text text-muted invalid-feedback"
+            *ngIf="submitted && commponent.stock.errors?.required">{{t('productAdd.productStockReq')}}</small>
+          <small class="form-text text-muted invalid-feedback" *ngIf="submitted && commponent.stock.errors?.min">
+            {{t('productAdd.productStockMinError')}}</small>
+        </div>
+
+
+        <div class="field col-6">
+          <label>{{t('productAdd.categories')}}</label>
+          <p-multiSelect formControlName="categories" id="categories" [options]="Gcategories"
+            optionLabel="name"></p-multiSelect>
+          <small class="form-text text-muted invalid-feedback"
+            *ngIf="submitted && commponent.categories.errors?.required">{{t('productAdd.categoriesReq')}}</small>
+        </div>
+
+
+        <div class="field col-12">
+          <label for="textarea">{{t('productAdd.Description')}}</label>
+          <textarea formControlName="description" id="textarea" [autoResize]="true" rows="5" cols="30"
+            placeholder="Your Message" pInputTextarea
+            [ngClass]="{'is-invalid': submitted && commponent.description.errors}"></textarea>
+          <small class="form-text text-muted invalid-feedback"
+            *ngIf="submitted && commponent.description.errors?.required">{{t('productAdd.DescriptionReq')}}</small>
+          <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (commponent.description.errors?.maxlength || commponent.description.errors?.minlength)
+        ">{{t('productAdd.DescriptionMinError')}}</small>
+
+        </div>
+        <div class="field col-12">
+          <label for="fileUpload">{{t('productAdd.productImage')}}</label>
+          <p-fileUpload name="image" [fileLimit]=1 url="https://www.primefaces.org/cdn/api/upload.php"
+            (onUpload)="onUpload($event)" accept="image/*">
+          </p-fileUpload>
+          <small class="form-text text-muted invalid-feedback" *ngIf="submitted && imageCreProduct==''">
+            {{t('productAdd.productImageReq')}}</small>
+        </div>
+        <div class="field col-12">
+
+          <p-button type="submit" label="{{t('productAdd.productAdd')}}"></p-button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</form>

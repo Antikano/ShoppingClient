@@ -1,0 +1,9 @@
+{
+
+    "Image":"Image",
+    "Name":"Name",
+    "Price":"Price",
+    "Stock":"Stock",
+    "Quantity":"Quantity",
+    "CompleteOrder":"Complete Order"
+}

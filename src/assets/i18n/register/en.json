@@ -1,0 +1,17 @@
+{
+
+    "signUp":"Sign Up",
+    "Firstname":"Firstname",
+    "FirstnameSmall":"Please do not leave the 'Firstname' field blank.",
+    "Surname":"Surname",
+    "SurnameSmall":"Please do not leave the 'Surname' field blank.",
+    "UN":"Username",
+    "UNSmall":"Please do not leave the 'Username' field blank.",
+    "email":"E-mail",
+    "emailSmall":"Please do not leave the 'E-mail' field blank.",
+    "emailSmallFormat":"Please enter the email field in the correct format.",
+    "password":"Password",
+    "passwordSmall":"Please do not leave the 'Password' field blank.",
+    "signup":"Sign Up"
+    
+}

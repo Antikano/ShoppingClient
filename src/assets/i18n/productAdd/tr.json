@@ -1,0 +1,21 @@
+{
+    "productName": "Ürün Adı",
+    "productNameReq":"Lütfen 'Ürün Adı' alanını boş geçmeyiniz.",
+    "productNameLength":"Lütfen 'Ürün Adı' 3 ile 50 karakter arasında olmasına dikakt ediniz.",
+    "productPrice":"Ürün Fiyatı",
+    "productPriceReq":"Lütfen 'Ürün Fiyatı' alanını boş geçmeyiniz.",
+    "productpriceMinError":"Lütfen 'Ürün Fiyatı' değerini 0'dan yüksek bir değer giriniz.",
+    "productStock":"Ürün Stoğu",
+    "productStockReq":"Lütfen 'Ürün Fiyatı' alanını boş geçmeyiniz.",
+    "productStockMinError":"Lütfen 'Ürün Fiyatı' değerini 0'dan yüksek bir değer giriniz.",
+    "categories":"Kategoriler",
+    "categoriesReq":"Lütfen en az bir 'Kategori' seçiniz.",
+    "Description":"Ürün Tanımı",
+    "DescriptionReq":"Lütfen 'Ürün Tanımı' alanını boş geçmeyiniz.",
+    "DescriptionMinError":"Lütfen 'Ürün Tanımı' 3 ile 100 karakter arasında olmasına dikakt ediniz.",
+    "productImage":"Ürün Resmi",
+    "productImageReq":"Lütfen 'Ürün Resmi' alanını boş geçmeyiniz.",
+    "productAdd":"Ürün Ekle"
+    
+
+}

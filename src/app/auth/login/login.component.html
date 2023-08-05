@@ -1,0 +1,50 @@
+<div *transloco="let t" class="card">
+    <div class="card flex justify-content-center">
+        <div class="surface-ground border-round p-6 shadow-8 ">
+            <div class="card rounded-lg p-4  p-3 border-round jsu ">
+                <div class="login-container">
+                    <div class="flex justify-content-center mb-2 p-fluid p-formgrid grid">
+                        <p class=" text-5xl"><b>{{t('login.title')}}</b></p>
+                    </div>
+                    <hr class="mb-3">
+                    <form [formGroup]="frm" (ngSubmit)="LoginUser(frm.value)">
+
+                        <div class="card p-fluid">
+
+                            <div class="field">
+                                <div class="flex flex-column gap-2">
+                                    <label htmlFor="username">{{t('login.username')}}</label>
+                                    <input virtualKeyboard [disableVirtualKeyboard]="this.isVirtualKeyboardEnabled"
+                                        pInputText formControlName="username" aria-describedby="username-help" />
+
+                                    <small class="form-text text-muted invalid-feedback"
+                                        *ngIf="submitted && commponent.username.errors?.required">{{t('login.usurnameSmall')}}</small>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>{{t('login.password')}}</label>
+                                <p-password formControlName="password" [toggleMask]="true" [feedback]="false"
+                                    type="text"></p-password>
+                                <small class="form-text text-muted invalid-feedback"
+                                    *ngIf="submitted && commponent.password.errors?.required">{{t('login.passwordSmall')}}</small>
+                            </div>
+                            <div class="col-12">
+                                <p-toast position="top-center"></p-toast>
+                                <button type="submit" pButton label="Log In" style="background-color: #212121;"
+                                    class="w-full p-3 text-xl"></button>
+                                <p class="pt-2 flex justify-content-center">{{t('login.notAMember')}} <a
+                                        style=" color: blueviolet;" routerLink="/register">
+                                        {{t('login.RegisterHere')}}</a>
+                                </p>
+                                <p class="pt-2 flex justify-content-center">
+                                    <a (click)="toggleVirtualKeyboard()">Sanal Klavye: </a>
+                                    <span class="ml-1">{{ isVirtualKeyboardEnabled ? 'Kapalı' : 'Açık' }}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

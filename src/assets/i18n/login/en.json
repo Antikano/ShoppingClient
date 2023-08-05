@@ -1,0 +1,9 @@
+{
+    "title":"Login",
+    "username":"Username",
+    "usurnameSmall":"Please do not leave the 'Username' field blank.",
+    "password":"Password",
+    "passwordSmall":"Please do not leave the 'Password' field blank",
+    "notAMember": "Not a member?",
+    "RegisterHere": "Register here!"
+}

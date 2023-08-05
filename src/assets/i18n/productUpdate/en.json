@@ -1,0 +1,19 @@
+{
+  "productName": "Product name",
+  "productprice": "Product Price",
+  "productStock": "Product Stock",
+  "productDescription": "Product Description",
+  "productAddImage": "Product Image",
+  "UpdateProduct": "Update Product",
+
+  "productNameReq": "Update Product Name",
+  "productPriceReq": "Update Product Price",
+  "productStockReq": "Update Product Stock",
+  "productDescriptionReq": "Update Product Description",
+  "productImageReq": "Update Product Image",
+
+  "productNameMinMax": "Please make sure the 'Product Name' is between 3 and 50 characters.",
+  "productPriceMinMax": "Please enter a value greater than 0 for the 'Product Price'.",
+  "productStockMinMax": "Please enter a value greater than 0 for the 'Product Stock'.",
+  "productDescriptionMinMax": "Please make sure the 'Product Description' is between 3 and 100 characters."
+}

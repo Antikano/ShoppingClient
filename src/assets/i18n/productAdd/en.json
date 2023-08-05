@@ -1,0 +1,19 @@
+{
+  "productName": "Product Name",
+  "productNameReq": "Please do not leave the 'Product Name' field empty.",
+  "productNameLength": "Please make sure the 'Product Name' is between 3 and 50 characters.",
+  "productPrice": "Product Price",
+  "productPriceReq": "Please do not leave the 'Product Price' field empty.",
+  "productPriceMinError": "Please enter a 'Product Price' value greater than 0.",
+  "productStock": "Product Stock",
+  "productStockReq": "Please do not leave the 'Product Stock' field empty.",
+  "productStockMinError": "Please enter a 'Product Stock' value greater than 0.",
+  "categories": "Categories",
+  "categoriesReq": "Please select at least one 'Category'.",
+  "Description": "Product Description",
+  "DescriptionReq": "Please do not leave the 'Product Description' field empty.",
+  "DescriptionMinError": "Please make sure the 'Product Description' is between 3 and 100 characters.",
+  "productImage": "Product Image",
+  "productImageReq": "Please do not leave the 'Product Image' field empty.",
+  "productAdd":"Product Add"
+}

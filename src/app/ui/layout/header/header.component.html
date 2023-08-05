@@ -1,0 +1,72 @@
+<div *transloco="let t">
+  <div style="margin-bottom: 25px;">
+    <mat-toolbar style="padding-right: 5px;">
+      
+      <mat-menu #menu="matMenu">
+        <button *ngIf="!authSer.isAuthentication" mat-menu-item routerLink="/login"
+          routerLinkActive="active">{{t('header.Login')}}</button>
+        <button *ngIf="!authSer.isAuthentication" mat-menu-item routerLink="/register"
+          routerLinkActive="active">{{t('header.Register')}}</button>
+        <button *ngIf="authSer.isAuthentication" mat-menu-item routerLink="/products" routerLinkActive="active">
+          {{t('header.ProductList')}} </button>
+        <button *ngIf="authSer.isAuthentication" mat-menu-item routerLink="/basket"
+          routerLinkActive="active">{{t('header.Basket')}}</button>
+        <button (click)="signOut()" *ngIf="authSer.isAuthentication" mat-menu-item routerLink="/login"
+          routerLinkActive="active">
+          {{t('header.SignOut')}}</button>
+      </mat-menu>
+
+      <button class="buttonRes" style="padding-left: 15px;" mat-button [matMenuTriggerFor]="menu"> <mat-icon>menu</mat-icon></button>
+
+      <a i18n mat-button routerLink="/products" routerLinkActive="active" style="margin-left: 15px; font-size: 20px;">
+        {{t('header.MyApp')}}</a>
+
+      <p-dropdown [options]="languageOptions" (onChange)="changeLanguage($event.value)"
+        placeholder="{{t('header.selectLang')}}"></p-dropdown>
+
+      <span class="example-spacer"></span>
+      <div class="hidden md:inline-flex" style="margin-right: 20px;">
+        <button *ngIf="!authSer.isAuthentication" mat-button class="example-icon favorite-icon" routerLink="/login"
+          routerLinkActive="active">
+          <mat-icon>account_box</mat-icon> {{t('header.Login')}}
+        </button>
+
+      </div>
+      <div class="hidden md:inline-flex">
+        <button *ngIf="!authSer.isAuthentication" mat-button class="example-icon favorite-icon" routerLink="/register"
+          routerLinkActive="active">
+          <mat-icon>account_box</mat-icon> {{t('header.Register')}}
+        </button>
+
+      </div>
+
+      <div class="hidden md:inline-flex">
+        <button *ngIf="authSer.isAuthentication" mat-button class="example-icon favorite-icon" routerLink="/products"
+          routerLinkActive="active">
+          <mat-icon>account_box</mat-icon> {{t('header.ProductList')}}
+        </button>
+
+      </div>
+
+      <div class="hidden md:inline-flex">
+        <button *ngIf="authSer.isAuthentication" mat-button class="example-icon favorite-icon" routerLink="/basket"
+          routerLinkActive="active">
+          <mat-icon>account_box</mat-icon> {{t('header.Basket')}}
+        </button>
+
+      </div>
+
+      <div class="hidden md:inline-flex">
+        <button (click)="signOut()" *ngIf="authSer.isAuthentication" mat-button class="example-icon favorite-icon"
+          routerLink="/login" routerLinkActive="active">
+          <mat-icon>account_box</mat-icon> {{t('header.SignOut')}}
+        </button>
+
+      </div>
+
+    </mat-toolbar>
+
+  </div>
+
+
+</div>

@@ -1,0 +1,16 @@
+{
+    "signUp": "Kaydol",
+    "Firstname": "Ad",
+    "FirstnameSmall": "Lütfen 'Ad' alanını boş bırakmayın.",
+    "Surname": "Soyad",
+    "SurnameSmall": "Lütfen 'Soyad' alanını boş bırakmayın.",
+    "UN": "Kullanıcı Adı",
+    "UNSmall": "Lütfen 'Kullanıcı Adı' alanını boş bırakmayın.",
+    "email": "E-posta",
+    "emailSmall": "Lütfen 'E-posta' alanını boş bırakmayın.",
+    "emailSmallFormat": "Lütfen 'E-posta' alanını doğru formatta girin.",
+    "password": "Şifre",
+    "passwordSmall": "Lütfen 'Şifre' alanını boş bırakmayın.",
+    "signup": "Kaydol"
+  }
+  

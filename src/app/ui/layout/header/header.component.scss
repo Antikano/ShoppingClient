@@ -1,0 +1,16 @@
+.example-spacer {
+    flex: 1 1 auto ;
+  }
+  
+  .buttonRes{
+    display: none;
+   
+  }
+  @media(max-width:768px){
+    .buttonRes{
+      display: flex;
+      
+    }
+  }
+  
+  

@@ -1,0 +1,10 @@
+{
+    "Image":"Image",
+    "Name":"Name",
+    "Price":"Price",
+    "Stock":"Stock",
+    "Category":"Category",
+    "Categories":"Categories",
+    "totalNumberOne":"In total there are ",
+    "totalNumberTwo":"products"
+}

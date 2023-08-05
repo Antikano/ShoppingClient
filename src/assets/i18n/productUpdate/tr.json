@@ -1,0 +1,19 @@
+{
+    "productName": "Ürün Adı",
+    "productprice": "Ürün Fiyatı",
+    "productStock": "Ürün Stok Durumu",
+    "productDescription": "Ürün Açıklaması",
+    "productAddImage": "Ürün Resmi",
+    "UpdateProduct": "Ürünü Güncelle",
+
+    "productNameReq": "Ürün Adını Güncelle",
+    "productPriceReq": "Ürün Fiyatını Güncelle",
+    "productStockReq": "Ürün Stokunu Güncelle",
+    "productDescriptionReq": "Ürün Açıklamasını Güncelle",
+    "productImageReq": "Ürün Resmini Güncelle",
+
+    "productNameMinMax": "Lütfen 'Ürün Adı' alanını en az 3 en fazla 50 karakter olacak şekilde doldurun.",
+  "productPriceMinMax": "Lütfen 'Ürün Fiyatı' alanına 0'dan büyük bir değer girin.",
+  "productStockMinMax": "Lütfen 'Ürün Stok' alanına 0'dan büyük bir değer girin.",
+  "productDescriptionMinMax": "Lütfen 'Ürün Açıklaması' alanını en az 3 en fazla 100 karakter olacak şekilde doldurun."
+}
